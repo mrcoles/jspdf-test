@@ -44,6 +44,7 @@ const onClickDownload = async (evt: Event) => {
   doc.addImage(canvas, "JPEG", 0, 0, width, height);
 
   // output and download the PDF
+  // TODO - issue with window.URL.createObjectURL and download when run on a remote server?
   const outputType = "bloburl";
   const output = doc.output(outputType);
 
